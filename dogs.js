@@ -8,6 +8,9 @@ Define DEBE watchdogs:
 		// do your thing
 	}
 
+This module 
+documented in accordance with [jsdoc]{@link https://jsdoc.app/}.
+
 @module WATCHDOGS
 */
 

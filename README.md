@@ -36,6 +36,9 @@ Define DEBE watchdogs:
 		// do your thing
 	}
 
+This module 
+documented in accordance with [jsdoc](https://jsdoc.app/).
+
 
 * [WATCHDOGS](#module_WATCHDOGS)
     * [.repos()](#module_WATCHDOGS.repos)
