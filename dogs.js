@@ -13,8 +13,36 @@ documented in accordance with [jsdoc]{@link https://jsdoc.app/}.
 
 @module WATCHDOGS
 */
+const
+	{Copy,Each,Fetch,Log} = require("../enums");
 
-module.exports = {	// watchdogs
+module.exports = DOGS = {	// watchdogs
+	sessions: sql => {
+		// https://www.iplocate.io/api/lookup/8.8.8.8
+		
+		sql.query( "SELECT IPsession AS ip FROM openv.sessions WHERE length(IPsession)" )
+		.on("result", rec => {
+			Fetch( `https://www.iplocate.io/api/lookup/${rec.ip}`, rtn => {
+				const 
+					rec = rtn.parseJSON( {} );
+
+				sql.query("UPDATE openv.sessions SET ? WHERE ?", [{
+					Country: rec.country,
+					State: rec.subdivision,
+					City: rec.city,
+					Lat: rec.latitude,
+					Lon: rec.longitude,
+					TimeZone: rec.time_zone,
+					PostalCode: rec.postal_code,
+					ISP: rec.org,
+					ASN: rec.asn
+				}, {
+					IPsession: rec.ip
+				}], (err,info) => Log(err || info.affectedRows) );
+			});
+		});
+	},
+	
 	/**
 	Repository watchdog
 	*/
