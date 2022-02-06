@@ -1,4 +1,4 @@
-# DOGS
+# DOGS [WWW](https://github.com/totemstan/dogs)  [COE](https://sc.appdev.proj.coe/acmesds/dogs)  [SBU](https://gitlab.west.nga.ic.gov/acmesds/dogs)
 
 **DOGS** converts [TOTEM markdown](/api.view) to html.
 
@@ -39,6 +39,7 @@ Define DEBE watchdogs:
 This module 
 documented in accordance with [jsdoc](https://jsdoc.app/).
 
+**Requires**: <code>module:[enums](https://github.com/totemstan/enums)</code>  
 </details>
 
 ## Contacting, Contributing, Following
