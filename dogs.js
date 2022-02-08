@@ -20,10 +20,18 @@ const
 module.exports = DOGS = {	// watchdogs
 	sessions: sql => {
 		// https://www.iplocate.io/api/lookup/8.8.8.8
-		
+		var
+			updates = 0;
+					
 		sql.query( "SELECT IPsession AS ip FROM openv.sessions WHERE length(IPsession)" )
 		.on("result", rec => {
-			Fetch( `https://www.iplocate.io/api/lookup/${rec.ip}`, rtn => {
+			const
+				ipPre = "::ffff:",
+				ipAddr = rec.ip.replace(ipPre, ""),
+				ipSrv = `https://www.iplocate.io/api/lookup/${ipAddr}`;
+			
+			//Log(ipSrv);
+			Fetch( ipSrv, rtn => {
 				const 
 					rec = rtn.parseJSON( {} );
 
@@ -38,8 +46,8 @@ module.exports = DOGS = {	// watchdogs
 					ISP: rec.org,
 					ASN: rec.asn
 				}, {
-					IPsession: rec.ip
-				}], (err,info) => Log(err || info.affectedRows) );
+					IPsession: ipPre+rec.ip
+				}], (err,info) => Log(`dog.sessions ${rec.ip}`, updates += err ? 0 : info.affectedRows) );
 			});
 		});
 	},
