@@ -15,9 +15,14 @@ documented in accordance with [jsdoc]{@link https://jsdoc.app/}.
 @requires [enums](https://github.com/totemstan/enums)
 */
 const
-	{Copy,Each,Fetch,Log} = require("./enums");
+	{Copy,Each,Fetch,Log,Start} = require("./enums");
 
 module.exports = DOGS = {	// watchdogs
+	config: opts => {
+		if (opts) Copy(opts,DOGS,".");
+		return DOGS;
+	},
+	
 	sessions: sql => {
 		// https://www.iplocate.io/api/lookup/8.8.8.8
 		var
@@ -743,3 +748,5 @@ mv '${msg}'_files index_files ;
 			});		
 	}
 };
+
+Start("dogs");

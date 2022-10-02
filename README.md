@@ -1,4 +1,4 @@
-# DOGS [WWW](https://github.com/totemstan/dogs)  [COE](https://sc.appdev.proj.coe/acmesds/dogs)  [SBU](https://gitlab.west.nga.ic.gov/acmesds/dogs)
+# [DOGS](https://github.com/totemstan/dogs)
 
 **DOGS** converts [TOTEM markdown](/api.view) to html.
 
@@ -6,20 +6,26 @@
 
 Clone **DOGS** from one of its repos:
 
-	git clone https://github.com/totemstan/dogs
-	git clone https://sc.appdev.proj.coe/acmesds/dogs
-	git clone https://gitlab.west.nga.ic.gov/acmesds/dogs
+	git clone REPO/totemstan/dogs
 
-## Manage 
+To start and manage **DOGS**:
 
-	npm test [ ? || T1 || T2 || ...]	# Run unit test
-	npm run redoc						# Update repo
+	npm run start [ ? | $ | ...]	# Unit test
+	npm run verminor				# Roll minor version
+	npm run vermajor				# Roll major version
+	npm run redoc					# Regen documentation
 
 ## Usage
 
-Require, configure and start **DOGS**:
+Require, optionally configure and start **DOGS**:
 	
-	const DOGS = require("dogs");
+	const DOGS = require("dogs").config({
+		key: value, 						// set key
+		"key.key": value, 					// indexed set
+		"key.key.": value					// indexed append
+	});
+
+where configuration keys follow [ENUMS deep copy conventions](https://github.com/totem-man/enums)
 
 ## Program Reference
 <details>
@@ -45,31 +51,11 @@ documented in accordance with [jsdoc](https://jsdoc.app/).
 ## Contacting, Contributing, Following
 
 Feel free to 
-* submit and status **DOGS** issues (
-[WWW](http://totem.zapto.org/issues.view) 
-[COE](https://totem.west.ile.nga.ic.gov/issues.view) 
-[SBU](https://totem.nga.mil/issues.view)
-)  
-* contribute to **DOGS** notebooks (
-[WWW](http://totem.zapto.org/shares/notebooks/) 
-[COE](https://totem.west.ile.nga.ic.gov/shares/notebooks/) 
-[SBU](https://totem.nga.mil/shares/notebooks/)
-)  
-* revise **DOGS** requirements (
-[WWW](http://totem.zapto.org/reqts.view) 
-[COE](https://totem.west.ile.nga.ic.gov/reqts.view) 
-[SBU](https://totem.nga.mil/reqts.view), 
-)  
-* browse **DOGS** holdings (
-[WWW](http://totem.zapto.org/) 
-[COE](https://totem.west.ile.nga.ic.gov/) 
-[SBU](https://totem.nga.mil/)
-)  
-* or follow **DOGS** milestones (
-[WWW](http://totem.zapto.org/milestones.view) 
-[COE](https://totem.west.ile.nga.ic.gov/milestones.view) 
-[SBU](https://totem.nga.mil/milestones.view)
-).
+* submit and status [TOTEM issues](http://totem.hopto.org/issues.view) 
+* contribute to [TOTEM notebooks](http://totem.hopto.org/shares/notebooks/) 
+* revise [TOTEM requirements](http://totem.hopto.org/reqts.view) 
+* browse [TOTEM holdings](http://totem.hopto.org/) 
+* or follow [TOTEM milestones](http://totem.hopto.org/milestones.view) 
 
 ## License
 

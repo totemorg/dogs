@@ -6,7 +6,7 @@
   "scripts": {
     "verminor": "npm version minor -f",
     "vermajor": "npm version major -f",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node dogs.js ",
     "redoc": "jsdoc2md --template README.hbs --files dogs.js >README.md; git commit -am 'redoc'; git  push agent master"
   },
   "repository": {
