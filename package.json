@@ -1,6 +1,6 @@
 {
-  "name": "dogs",
-  "version": "1.1.0",
+  "name": "@totemstan/dogs",
+  "version": "1.2.0",
   "description": "**SKIN** provides a:",
   "main": "dogs.js",
   "scripts": {
@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/totemstan/dogs/issues"
   },
-  "homepage": "https://github.com/totemstan/dogs#readme"
+  "homepage": "https://github.com/totemstan/dogs#readme",
+  "dependencies": {
+    "@totemstan/enums": "^1.17.0"
+  }
 }
