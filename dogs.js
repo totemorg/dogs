@@ -12,10 +12,10 @@ This module
 documented in accordance with [jsdoc]{@link https://jsdoc.app/}.
 
 @module WATCHDOGS
-@requires [enums](https://github.com/totemstan/enums)
+@requires [enums](https://github.com/totemorg/enums)
 */
 const
-	{Copy,Each,Fetch,Log,Start} = require("@totemstan/enums");
+	{Copy,Each,Fetch,Log,Start} = require("./enums");
 
 const
 	DOGS = module.exports = {	// watchdogs
