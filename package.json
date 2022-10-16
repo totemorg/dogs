@@ -1,6 +1,6 @@
 {
-  "name": "@totemstan/dogs",
-  "version": "1.2.0",
+  "name": "@totemorg/dogs",
+  "version": "1.3.0",
   "description": "**SKIN** provides a:",
   "main": "dogs.js",
   "scripts": {
@@ -11,15 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/totemstan/dogs.git"
+    "url": "git+https://github.com/totemorg/dogs.git"
   },
   "author": "ACMESDS",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/totemstan/dogs/issues"
+    "url": "https://github.com/totemorg/dogs/issues"
   },
-  "homepage": "https://github.com/totemstan/dogs#readme",
+  "homepage": "https://github.com/totemorg/dogs#readme",
   "dependencies": {
-    "@totemstan/enums": "^1.17.0"
+    "@totemorg/enums": "^1.21.0"
   }
 }
