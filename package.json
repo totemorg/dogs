@@ -20,6 +20,6 @@
   },
   "homepage": "https://github.com/totemorg/dogs#readme",
   "dependencies": {
-    "@totemorg/enums": "^1.21.0"
+    "@totemorg/enums": "^1.27.0"
   }
 }
